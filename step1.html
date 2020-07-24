@@ -1,0 +1,45 @@
+<!doctype html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style>
+		.evt	 {position:relative; border:1px solid red; width:200px; height:200px; margin:100px;}
+		.evt .cont	{border:1px solid green; width:100px; height:100px; margin-left:50px;}
+		.evt .layer	{position:absolute; top:50px; left:250px; border:1px solid pink; width:100px; height:100px;}
+	</style>
+</head>
+
+<body>
+
+	<!-- 소스정리 : 변수선언부, 이벤트선언부, 내부함수정의 따로따로 -->
+	<!--
+		예제1 : 카운터 : 카운터가 여러개일때, prototype 문법
+	-->
+	<div class="counter">
+		<button class="down">-</button>
+		<input type="text" value="0">
+		<button class="up">+</button>
+	</div>
+
+	<!--
+		예제2 : 이벤트 : 버블, 캡처
+	-->
+	<div class="evt">
+		부모
+		<div class="cont">
+			자식
+		</div>
+		<div class="layer">레이어</div>
+	</div>
+
+	<!--
+		예제3 : 이미지 애니메이션
+	-->
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+	</script>
+</body>
+</html>
