@@ -1,0 +1,88 @@
+<!doctype html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style>
+		*	{margin:0; padding:0; border:0; text-decoration:none; list-style:none; font-family:"Malgun Gothic",arial,dotum,"돋움";}
+		.basic_select	{border:1px solid #000; width:200px; line-height:1.2; padding:3px; vertical-align:middle;}
+
+		.my_selectbox1	{position:relative; border:1px solid #558500; background:url("images/bg_select_style1.gif") #609700 no-repeat 100% 0; z-index:100; font-family:arial; display:inline-block; width:200px;}
+		.my_selectbox1 .default a	 {color:#fff; font-size:12px; display:block; padding:5px 0 6px 13px;}
+		.my_selectbox1 ul	{position:absolute; top:25px; left:-1px; background:#609700; border:1px solid #558500; border-bottom:0; width:100%; display:none; padding:5px 0 7px;}
+		.my_selectbox1.on ul	{display:block;}
+		.my_selectbox1 ul li	{line-height:12px;}
+		.my_selectbox1 ul li a	{padding:5px 10px 5px; display:block; font-size:12px; color:#fff;}
+		.my_selectbox1 ul li a:hover	{}
+
+		.my_selectbox2	{position:relative; border:1px solid #3565a0; background:url("images/bg_select_style1.gif") #009760 no-repeat 100% 0; z-index:100; font-family:arial; display:inline-block; width:200px;}
+		.my_selectbox2 .default a	 {color:#fff; font-size:12px; display:block; padding:5px 0 6px 13px;}
+		.my_selectbox2 ul	{position:absolute; top:25px; left:-1px; background:#009760; border:1px solid #3565a0; border-bottom:0; width:100%; display:none; padding:5px 0 7px;}
+		.my_selectbox2.on ul	{display:block;}
+		.my_selectbox2 ul li	{line-height:12px;}
+		.my_selectbox2 ul li a	{padding:5px 10px 5px; display:block; font-size:12px;  color:#fff;}
+		.my_selectbox2 ul li a:hover	{}
+
+		.vod_viewer	{position:relative; width:500px; margin:100px; border:1px solid #000; overflow:hidden;}
+		.vod_viewer .thumb img	 {width:100%; vertical-align:top;}
+		.vod_viewer .controller	{position:absolute; bottom:0; left:0; width:100%; height:50px; background:rgba(0,0,0,0.5); display:none;}
+		.vod_viewer.on .controller	{display:block;}
+		.vod_viewer .controller .off	 {display:inline-block; width:50px; height:50px; background:url("images/off.png") no-repeat 50% 50%; background-size:70%;}
+		.vod_viewer .controller .on	 {display:inline-block; width:50px; height:50px; background:url("images/on.png") no-repeat 50% 50%; background-size:70%;}
+	</style>
+</head>
+<body>
+	<!-- 예시 -->
+	<select class="basic_select">
+		<option>한국어</option>
+		<option>English</option>
+		<option>Chinese</option>
+	</select>
+	<select class="basic_select">
+		<option>한국어</option>
+		<option>English</option>
+		<option>Chinese</option>
+	</select>
+
+	<!--
+		문제 1 :
+		위 셀렉트 박스와 동일한 기능을 하는 드롭다운 메뉴를 구현하시오.
+	-->
+	<div class="my_selectbox1"><!-- on 클래스가 추가되면, 열림 -->
+		<p class="default"><a href="#">한국어</a></p>
+		<ul>
+			<li><a href="#">한국어</a></li>
+			<li><a href="#">English</a></li>
+			<li><a href="#">Chinese</a></li>
+		</ul>
+	</div>
+
+	<div class="my_selectbox2"><!-- on 클래스가 추가되면, 열림 -->
+		<p class="default"><a href="#">한국어</a></p>
+		<ul>
+			<li><a href="#">한국어</a></li>
+			<li><a href="#">English</a></li>
+			<li><a href="#">Chinese</a></li>
+		</ul>
+	</div>
+
+
+
+	<!--
+		문제 2 :
+		이미지 영역 클릭시, 컨트롤러 보이기
+		컨트롤러의 버튼 클릭할때마다 불 켜지고 꺼지고 반복하기 : 이때 컨트롤러가 사라지면 안됨~
+	-->
+	<div class="vod_viewer"><!-- on 클래스 추가하면 컨트롤러가 나옴 -->
+		<p class="thumb"><img src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fsports-phinf.pstatic.net%2F20200725_79%2F1595681634906vO0ud_JPEG%2F%25C0%25FC%25C3%25BCHL_-_%2527%25C3%25D6%25C7%25FC%25BF%25EC_%25B0%25E1%25BD%25C2%25C5%25B8%2527_KIA%252C_8%25C8%25B8_%25BA%25F2%25C0%25CC%25B4%25D7%25C0%25B8%25B7%25CE_%25BB%25EF%25BC%25BA%25BF%25A1_%25BF%25AA%25C0%25FC%25BD%25C2.jpg%22&type=nf728_360"></p>
+
+		<div class="controller">
+			<button type="button" class="off">버튼</button><!-- on 클래스로 교체하면, 버튼에 불들어옴 -->
+		</div>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>
+	</script>
+</body>
+</html>
