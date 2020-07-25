@@ -81,7 +81,8 @@
 		function Test(name){
 			this.name = name;
 		}
-		Test.prototype.counter = function(){
+		Test.prototype.getName = function(){
+			console.log(this.name);
 		}
 		var test = new Test("마약");
 		test.getName();
